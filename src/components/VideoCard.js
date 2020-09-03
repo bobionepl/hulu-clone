@@ -1,14 +1,17 @@
 import React from "react";
 import "../css/VideoCard.css";
+import Results from "./Results";
+
+const base_url = "https://image.tmdb.org/t/p/original/"
 
 function VideoCard({ movie }) {
     return(
         <div className="videoCard">
-            <h1>helo</h1>
-            <img src="" alt=""/>
-            <p>movie desc</p>
-            <h2>mov title</h2>
-            <p>num of likes</p>
+
+            <img src={`${base_url}${movie.backdrop_path || movie.poster_path}`} alt="movie img"/>
+            <p>{movie.overview}</p>
+            <h2>{movie.title}</h2>
+            <p>{movie.vote_count} {movie.relase_date}</p>
         </div>
 
     )

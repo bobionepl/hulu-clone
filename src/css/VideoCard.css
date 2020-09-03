@@ -11,6 +11,8 @@
 
 .videoCard:hover {
     transform: scale(1.09);
+
+
 }
 
 .videoCard > img {
@@ -24,4 +26,21 @@
     padding-top: 10px;
 
 }
+
+.videoCard > p {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+
+}
+
+.videoCard:hover > p {
+    overflow: visible;
+    text-overflow: unset;
+    white-space: unset;
+}
+/*.videoCard > p:hover{*/
+/*    display: inline-block;*/
+
+/*}*/
 
