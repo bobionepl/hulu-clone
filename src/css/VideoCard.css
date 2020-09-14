@@ -9,14 +9,25 @@
 
 }
 @media (max-width:768px){
-    .videoCard > img {
+    .videoCard > .imgContainer > img {
         max-height: 193px;
+        max-width: 90vw;
+    }
+
+    .videoCard:hover {
+        transform: unset;
+
+    }
+    .videoCard{
+        max-width: 90vw;
+        padding: 0;
     }
 
 }
 
 .videoCard:hover {
     transform: scale(1.09);
+    padding: 20px 20px 0 20px;
 }
 
 .videoCard_stats{
@@ -27,10 +38,14 @@
     display: inline;
 }
 
-.videoCard > img {
+.videoCard > .imgContainer > img{
     height: 300px;
     width: 500px;
     object-fit: contain;
+
+}
+.videoCard:hover > .imgContainer > img {
+    opacity: 0.7;
 
 }
 
@@ -45,11 +60,33 @@
     white-space: nowrap;
 
 }
+.videoCard > .imgContainer{
+    position: relative;
+}
+.videoCard > .imgContainer > a {
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+}
+.videoCard > .imgContainer > a > .playBtn{
+    width: 80px;
+    height: 80px;
+    color: white;
+    /*opacity: 0.9;*/
+    display: none;
+}
+.videoCard > .imgContainer > a > .playBtn:hover {
+    color: #0091ea;
+
+}
+.videoCard:hover > .imgContainer > a > .playBtn {
+    display: inline-block;
+}
+
 
 .videoCard:hover > p {
-    overflow: visible;
-    text-overflow: unset;
-    white-space: unset;
+    overflow: hidden;
+    white-space: nowrap;
 }
 /*.videoCard > p:hover{*/
 /*    display: inline-block;*/
